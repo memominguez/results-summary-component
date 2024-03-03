@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: HankenGrotesk-Bold;
+  src: url(./assets/fonts/static/HankenGrotesk-Bold.ttf);
+}
+
+@font-face {
+  font-family: HankenGrotesk-ExtraBold;
+  src: url(./assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: HankenGrotesk-Medium;
+  src: url(./assets/fonts/static/HankenGrotesk-Medium.ttf);
+}
+
+@font-face {
+  font-family: HankenGrotesk-Variable;
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+  /* *** Primary colors *** */
+  --light-red: hsl(0, 100%, 67%);
+  --orange-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  /* *** Neutral colors *** */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* *** Gradients *** */
+/* 
+ Light slate blue (background): hsl(252, 100%, 67%)
+- Light royal blue (background): hsl(241, 81%, 54%)
+
+- Violet blue (circle): hsla(256, 72%, 46%, 1)
+- Persian blue (circle): hsla(241, 72%, 46%, 0)
+*/
+
+body {
+  margin: 0;
+  font-family: "HankenGrotesk-Variable", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  /* background-color: blueviolet; */
+  /* background: var(--light-lavender); */
+  background: rgb(34, 167, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 167, 195, 1) 0%,
+    rgba(168, 179, 104, 1) 90%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+p {
+  font-size: 18px;
+}
+
+.container {
+  place-self: center;
+  width: 630px;
+  height: 450px;
+  display: flex;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ******** Left ******** */
+
+.left {
+  width: 50%;
+  height: 100%; 
+  background-image: linear-gradient(
+    to top,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0.65)
+  );
+  border-radius: 20px; 
+  color: var(--light-lavender);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.circle {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsla(256, 72%, 46%, 1); 
+}
+
+.score {
+  font-size: 3.5rem;
+  margin-bottom: -1rem;
+  color: var(--white);
+}
+
+.great {
+  color: var(--white);
+}
+
+.paragraph {
+  width: 80%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* ******** Right ********* */
+.right {
+  width: 50%;
+  height: 100%;
+  padding: 15px 30px 15px 30px;
+  /* padding: 1rem; */
+  border-radius: 20px;
+}
+
+.right h3 {
+  margin-left: 9px;
+}
+
+ul {
+  width: 115%;
+  margin-left: -36px;
+}
+
+li {
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 15px 0 15px;
+  line-height: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+
+li:nth-child(1) {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+
+li:nth-child(1) .item-left p {
+  color: var(--light-red);
+  font-weight: 700;
+}
+
+li:nth-child(2) {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+
+li:nth-child(2) .item-left p {
+  color: var(--orange-yellow);
+  font-weight: 700;
+}
+
+li:nth-child(3) {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+
+li:nth-child(3) .item-left p {
+  color: var(--green-teal);
+  font-weight: 700;
+}
+
+li:nth-child(4) {
+  background: hsla(241, 100%, 89%, 0.2);
+}
+li:nth-child(4) .item-left p {
+  font-weight: 700;
+}
+
+.item-left {
+  display: flex;
+}
+
+.item-left img {
+  margin-right: 7px;
+}
+
+.score-span {
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 20px;
+  /* background: var(--dark-gray-blue); */
+  background-image: linear-gradient(
+    to top,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0.65)
+  );
+  color: var(--white);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 350px;
+    height: fit-content;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  .left {
+    width: 100%;
+    height: 360px;
+    border-radius: 5px 5px 15px 15px;
+  }
+
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .circle > p {
+    font-size: 1rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .right {
+    width: 100%;
+    padding-bottom: 30px;   
+  }
+}
+
