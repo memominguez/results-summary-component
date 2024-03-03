@@ -36,8 +36,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: Pending
-- Live Site URL: Pending
+- Solution URL:  [Github repository](https://github.com/memominguez/results-summary-component)
+- Live Site URL:  [Github pages](https://memominguez.github.io/results-summary-component/)
+
 
 ## My process
 
